@@ -1,0 +1,38 @@
+.container {
+  width: 200px;
+  height: 121px;
+  position: relative;
+}
+
+.smile svg {
+  width: 80px;
+  position: absolute;
+  left: 48px;
+  bottom: 0px;
+}
+
+.star svg {
+  width: 14px;
+  position: absolute;
+}
+
+.star1 svg {
+  fill: var(--salmon);
+  top: 32px;
+  left: 13px;
+  transform: rotate(-7deg);
+}
+
+.star2 svg {
+  fill: var(--mulberry);
+  top: 12px;
+  left: 90px;
+  transform: rotate(11deg);
+}
+
+.star3 svg {
+  fill: var(--cornflower-blue);
+  top: 42px;
+  right: 24px;
+  transform: rotate(-7deg);
+}

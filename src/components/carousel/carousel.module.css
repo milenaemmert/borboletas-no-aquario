@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+  gap: 32px;
+  padding: var(--default-padding) 0;
+  width: 100%;
+  background-color: var(--wine-berry-color);
+  color: var(--merino-color);
+}
+
+.containerImages {
+  display: flex;
+
+  gap: 64px;
+  overflow-x: hidden;
+}
+
+.imageWrapper {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container svg {
+  width: 24px;
+  stroke: var(--merino-color);
+}

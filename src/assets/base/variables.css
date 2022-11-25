@@ -1,0 +1,14 @@
+:root {
+	--merino-color: #F4EEE3;
+  --casal-color: #286669;
+  --cornflower-blue: #20BDC2;
+	--wine-berry-color: #621D42;
+  --mulberry: #BE4797;
+	--rose-color: #FF0089;
+  --salmon: #FF8F66;
+  --salmon-opacity: #ff8f66aa;
+	
+	--default-padding: 32px;
+  --default-gap: 16px;
+  --default-transition-speed: 0.2s;
+}

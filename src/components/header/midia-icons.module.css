@@ -1,0 +1,13 @@
+.container {
+  composes: baseFlex from global;
+  gap: var(--default-gap);
+}
+
+.container svg {
+  width: 32px;
+  
+}
+
+.container path {
+  fill: var(--rose-color);
+}

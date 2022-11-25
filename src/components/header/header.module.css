@@ -1,0 +1,16 @@
+header {
+  padding: var(--default-padding) 0;
+}
+
+.container {
+  composes: baseDesktop from global;
+  position: relative;
+}
+
+.container span {
+  font-size: 36px;
+  color: var(--casal-color);
+  position: absolute;
+  left: 142px;
+  top: 48px;
+}

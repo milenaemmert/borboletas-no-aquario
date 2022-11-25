@@ -1,0 +1,25 @@
+@import url('./fonts.css');
+@import url('./reset.css');
+@import url('./variables.css');
+
+::selection {
+	background-color: var(--salmon-opacity);
+  
+}
+
+body {
+	background-color: var(--merino-color);
+
+  font-family: 'Preahvihear', sans-serif;
+}
+
+.baseDesktop {
+  width: 1248px;  
+  margin: 0 auto;
+}
+
+.baseFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
