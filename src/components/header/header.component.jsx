@@ -7,9 +7,9 @@ export const Header = () => {
     <header className={s.headerContainer}>
       <div className={s.logoContainer}>
         <Logo />
-        <span>Muito prazer, meu nome é borboletas no aquário</span>
+        <span>Muito prazer, ao seu dispor</span>
       </div>
-      <div className={s.container}>
+      <div className={s.midiaIconsContainer}>
         <MidiaIcons />
       </div>
     </header>

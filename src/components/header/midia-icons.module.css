@@ -1,10 +1,10 @@
 .container {
   composes: baseFlex from global;
-  gap: var(--default-gap);
+  gap: calc(var(--default-gap)/2);
 }
 
 .container svg {
-  width: 32px;
+  width: 24px;
   
 }
 
