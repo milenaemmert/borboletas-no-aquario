@@ -1,1 +1,1 @@
-// export { NAME } from '.name'
+export { BANNER } from './banner'

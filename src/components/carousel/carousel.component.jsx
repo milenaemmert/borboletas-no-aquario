@@ -1,14 +1,12 @@
 import s from './carousel.module.css'
-import a from '../../assets/images/carousel-a.png'
-import b from '../../assets/images/carousel-b.png'
-import c from '../../assets/images/carousel-c.png'
-import d from '../../assets/images/carousel-d.png'
+import { Banner } from './banner.component'
+import { BANNER } from '../../constants/banner'
 import { circle } from '../../assets/icons'
 import { useState, useEffect, useRef } from 'react'
 
 export const Carousel = () => {
   const scrollArea = useRef(null)
-  const w0 = useRef(null) // .current **ver depois
+  const w0 = useRef(null)
   const w1 = useRef(null)
   const w2 = useRef(null)
   const w3 = useRef(null)
@@ -44,20 +42,44 @@ export const Carousel = () => {
 
   return (
     <div className={s.container}>
-      <span>ei, olha essa exposição, antes de tudo</span>
+      <span className={s.containerTitle}>ei, olha essa exposição, antes de tudo</span>
+      
       
       <div className={s.containerImages} ref={scrollArea}>
         <div className={s.imageWrapper} ref={w0}>
-          <img src={a} alt='Dog' />
+          <img src={BANNER[2].image} alt='Dog' />
+          <div className={s.imageDescription}>
+            <span>{BANNER[2].title}</span>
+            <p>{BANNER[2].description}</p>
+            <a href='#' target='_blank'>{BANNER[2].author}</a>
+          </div>
         </div>
+        
         <div className={s.imageWrapper} ref={w1}>
-          <img src={b} alt='Bun' />
+          <img src={BANNER[0].image} alt='Bun' />
+          <div className={s.imageDescription}>
+            <span>{BANNER[0].title}</span>
+            <p>{BANNER[0].description}</p>
+            <a href='#' target='_blank'>{BANNER[0].author}</a>
+          </div>
         </div>
+        
         <div className={s.imageWrapper} ref={w2}>
-          <img src={c} alt='Cat' />
+          <img src={BANNER[1].image} alt='Cat' />
+          <div className={s.imageDescription}>
+            <span>{BANNER[1].title}</span>
+            <p>{BANNER[1].description}</p>
+            <a href='#' target='_blank'>{BANNER[1].author}</a>
+          </div>
         </div>
+        
         <div className={s.imageWrapper} ref={w3}>
-          <img src={d} alt='Ham' />
+          <img src={BANNER[3].image} alt='Ham' />
+          <div className={s.imageDescription}>
+            <span>{BANNER[3].title}</span>
+            <p>{BANNER[3].description}</p>
+            <a href='#' target='_blank'>{BANNER[3].author}</a>
+          </div>
         </div>
       </div>
       

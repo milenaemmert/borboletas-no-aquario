@@ -4,14 +4,14 @@ import { MidiaIcons } from './midia-icons.component'
 
 export const Header = () => {
   return (
-    <header>
-      <div className={s.container}>
+    <header className={s.headerContainer}>
+      <div className={s.logoContainer}>
         <Logo />
         <span>Muito prazer, meu nome é borboletas no aquário</span>
       </div>
-
-      <MidiaIcons />
-
+      <div className={s.container}>
+        <MidiaIcons />
+      </div>
     </header>
   )
 }

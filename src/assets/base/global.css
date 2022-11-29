@@ -14,12 +14,11 @@ body {
 }
 
 .baseDesktop {
-  width: 1248px;  
+  max-width: 1248px;  
   margin: 0 auto;
 }
 
 .baseFlex {
   display: flex;
-  justify-content: center;
   align-items: center;
 }

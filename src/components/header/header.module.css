@@ -1,16 +1,22 @@
-header {
-  padding: var(--default-padding) 0;
+.headerContainer {
+  composes: baseDesktop from global;
+  display: flex;
+  justify-content: space-between;
 }
 
-.container {
-  composes: baseDesktop from global;
+.logoContainer {
+  width: 100%;
   position: relative;
 }
 
-.container span {
-  font-size: 36px;
+.logoContainer span {
   color: var(--casal-color);
   position: absolute;
   left: 142px;
-  top: 48px;
+  top: 66px;
+}
+
+.container {
+  position: relative;
+  top: 68px;
 }
