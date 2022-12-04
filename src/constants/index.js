@@ -1,2 +1,2 @@
-export { BANNER } from './banner'
+export { BANNERS } from './banners'
 export { VIDEOS } from './videos'

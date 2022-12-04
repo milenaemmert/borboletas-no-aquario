@@ -1,19 +1,19 @@
 import s from './banner.module.css'
-import { BANNER } from '../../constants/banner'
+import { useRef } from 'react'
 
-export const Banner = () => {
-  BANNER.map(elem => {
-    const index = BANNER.indexOf(elem)
-    return (
+export const Banner = ({ image, title, description, author, ref }) => {
+  const teste = useRef(ref)
 
-      <div className={s.banner}>
-        <img src={elem.image} alt='' />
-        <div className={s.imageDescription}>
-          <span>{elem.title}</span>
-          <p>{elem.description}</p>
-          <a href='#' target='_blank'>{elem.author}</a>
-        </div>
+  return (
+    <div className={s.banner} ref={teste}>
+      <img src={image} alt='' />
+
+      <div className={s.imageDescription}>
+        <span>{title}</span>
+        
+        <p>{description}</p>
+        <a href='#' target='_blank'>{author}</a>
       </div>
-    )
-  })
+    </div>
+  )
 }
