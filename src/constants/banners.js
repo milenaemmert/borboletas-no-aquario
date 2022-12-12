@@ -4,7 +4,7 @@ import dog from '../assets/images/carousel-dog.png'
 import ham from '../assets/images/carousel-ham.png'
 
 
-export const BANNER = [
+export const BANNERS = [
   {
     image: bun,
     title: 'Bunny sobre óleo',

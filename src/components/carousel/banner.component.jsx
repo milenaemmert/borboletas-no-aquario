@@ -1,19 +1,25 @@
 import s from './banner.module.css'
-import { BANNER } from '../../constants/banner'
+import { useEffect, useRef } from 'react'
 
-export const Banner = () => {
-  BANNER.map(elem => {
-    const index = BANNER.indexOf(elem)
-    return (
+export const Banner = ({ image, title, description, author, bannerRef, currentBanner }) => {
+  const ref = useRef(bannerRef)
 
-      <div className={s.banner}>
-        <img src={elem.image} alt='' />
-        <div className={s.imageDescription}>
-          <span>{elem.title}</span>
-          <p>{elem.description}</p>
-          <a href='#' target='_blank'>{elem.author}</a>
-        </div>
+  useEffect(() => {
+    if(bannerRef === currentBanner) {
+      ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [currentBanner])
+
+  return (
+    <div className={s.banner} ref={ref}>
+      <img src={image} alt='' />
+
+      <div className={s.imageDescription}>
+        <span>{title}</span>
+        
+        <p>{description}</p>
+        <a href='#' target='_blank'>{author}</a>
       </div>
-    )
-  })
+    </div>
+  )
 }

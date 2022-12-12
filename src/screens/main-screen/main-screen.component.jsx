@@ -1,11 +1,11 @@
-import { Header, Carousel, VideosSection } from '../../components'
+import { Header, Carousel, Videos } from '../../components'
 
 export const MainScreen = () => {
   return (
     <>
       <Header />
       <Carousel />
-      <VideosSection />
+      <Videos />
     </>
   )
 }
