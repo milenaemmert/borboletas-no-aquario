@@ -2,41 +2,24 @@ import s from './carousel.module.css'
 import { Banner } from './banner.component'
 import { BANNERS } from '../../constants'
 import { circle } from '../../assets/icons'
-import { useState, useEffect, useRef } from 'react'
+import { useState } from 'react'
 
 export const Carousel = () => {
-  const scrollArea = useRef(null)
-  const w0 = useRef(null)
-  const w1 = useRef(null)
-  const w2 = useRef(null)
-  const w3 = useRef(null)
-
-  const elements = {
-    0: w0,
-    1: w1,
-    2: w2,
-    3: w3
-  }
-
-  const [current, setCurrent] = useState(0)
-
-  /*useEffect(() => {
-    elements[current].current.scrollIntoView({ behavior: "smooth", block: "start" })
-  }, [current])*/
+  const [currentBanner, setCurrentBanner] = useState(0)
 
   const handleBackward = () => {
-    if (current === 0) {
-      setCurrent(3)
+    if (currentBanner === 0) {
+      setCurrentBanner(BANNERS.length - 1)
     } else {
-      setCurrent(current => current - 1)
+      setCurrentBanner(current => current - 1)
     }
   }
 
   const handleForward = () => {
-    if (current === 3) {
-      setCurrent(0)
+    if (currentBanner === BANNERS.length - 1) {
+      setCurrentBanner(0)
     } else {
-      setCurrent(current => current + 1)
+      setCurrentBanner(current => current + 1)
     }
   }
 
@@ -44,11 +27,13 @@ export const Carousel = () => {
     return BANNERS.map((banner, index) => {
       return (
         <Banner
+          key={index}
           image={banner.image}
           title={banner.title}
           description={banner.description}
           author={banner.author}
-          ref={elements[index]}
+          bannerRef={index}
+          currentBanner={currentBanner}
         />
       )
     })
@@ -58,7 +43,7 @@ export const Carousel = () => {
     <div className={s.container}>
       <span className={s.containerTitle}>ei, olha essa exposição, antes de tudo</span>
 
-      <div className={s.containerImages} ref={scrollArea}>
+      <div className={s.containerImages}>
         {renderBanners()}
       </div>
 
