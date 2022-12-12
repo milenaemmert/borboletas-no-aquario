@@ -1,3 +1,5 @@
-export { Header } from './header/header.component'
-export { Carousel } from './carousel/carousel.component'
-export { VideosSection } from './videos-section/videos-section.component'
+export * from './header/header.component'
+export * from './carousel/carousel.component'
+export * from './carousel/banner.component'
+export * from './videos/videos.component'
+export * from './carousel/dots.component'

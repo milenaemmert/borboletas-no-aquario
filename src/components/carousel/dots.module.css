@@ -1,0 +1,17 @@
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  border: 1px solid white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: 0.5s background-color;
+  padding: 2px;
+}
+
+.selected {
+  background-color: white;
+}

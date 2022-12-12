@@ -1,7 +1,6 @@
 import s from './carousel.module.css'
-import { Banner } from './banner.component'
+import { Banner, Dots } from '../'
 import { BANNERS } from '../../constants'
-import { circle } from '../../assets/icons'
 import { useState } from 'react'
 
 export const Carousel = () => {
@@ -47,7 +46,7 @@ export const Carousel = () => {
         {renderBanners()}
       </div>
 
-      {circle}
+      <Dots banners={BANNERS} currentBanner={currentBanner} setCurrentBanner={setCurrentBanner} />
 
       <button className={s.backward} onClick={handleBackward}>Backward</button>
       <button className={s.forward} onClick={handleForward}>Forward</button>
