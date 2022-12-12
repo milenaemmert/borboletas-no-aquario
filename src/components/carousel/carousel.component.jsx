@@ -1,10 +1,20 @@
 import s from './carousel.module.css'
 import { Banner, Dots } from '../'
 import { BANNERS } from '../../constants'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export const Carousel = () => {
   const [currentBanner, setCurrentBanner] = useState(0)
+
+  useEffect(() => {
+    const bannerChangeInMs = 4000
+
+    const bannerChange = setTimeout(() => {
+      handleForward()
+    }, bannerChangeInMs)
+
+    return () => clearTimeout(bannerChange)
+  }, [currentBanner])
 
   const handleBackward = () => {
     if (currentBanner === 0) {
